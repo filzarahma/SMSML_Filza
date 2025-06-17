@@ -1,0 +1,39 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.13
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 2.22.0
+model_size_bytes: 1508251
+model_uuid: 5f079515655b48309982e811c2b022b3
+prompts: null
+run_id: 86bdd9857872463e959c37f386654081
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "Age", "required": true}, {"type": "long",
+    "name": "Sex", "required": true}, {"type": "long", "name": "ChestPainType", "required":
+    true}, {"type": "double", "name": "RestingBP", "required": true}, {"type": "double",
+    "name": "Cholesterol", "required": true}, {"type": "double", "name": "FastingBS",
+    "required": true}, {"type": "long", "name": "RestingECG", "required": true}, {"type":
+    "double", "name": "MaxHR", "required": true}, {"type": "long", "name": "ExerciseAngina",
+    "required": true}, {"type": "double", "name": "Oldpeak", "required": true}, {"type":
+    "long", "name": "ST_Slope", "required": true}]'
+  outputs: '[{"type": "double", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-06-17 11:15:31.254122'

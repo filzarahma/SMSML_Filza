@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/958754894695940481/755633cc0be740e8837acb354e8d4c33/artifacts
+end_time: 1750158963959
+entry_point_name: ''
+experiment_id: '958754894695940481'
+lifecycle_stage: active
+run_id: 755633cc0be740e8837acb354e8d4c33
+run_name: rf_n200_depth5
+run_uuid: 755633cc0be740e8837acb354e8d4c33
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750158957136
+status: 3
+tags: []
+user_id: Fauzan

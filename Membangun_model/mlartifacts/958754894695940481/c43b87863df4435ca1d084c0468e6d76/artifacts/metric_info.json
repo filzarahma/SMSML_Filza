@@ -1,0 +1,11 @@
+{
+  "accuracy": 0.8695652173913043,
+  "RandomForestClassifier_score_X_test": 0.8695652173913043,
+  "training_accuracy_score": 0.9046321525885559,
+  "training_f1_score": 0.9150485436893204,
+  "training_log_loss": 0.26596482615312333,
+  "training_precision_score": 0.8912529550827423,
+  "training_recall_score": 0.940149625935162,
+  "training_roc_auc": 0.967603513738177,
+  "training_score": 0.9046321525885559
+}

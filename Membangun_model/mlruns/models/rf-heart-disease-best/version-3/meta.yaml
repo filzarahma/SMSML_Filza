@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1750158970983
+current_stage: None
+description: ''
+last_updated_timestamp: 1750158970983
+name: rf-heart-disease-best
+run_id: 806d369d30ea4014a0a835dc2097cea3
+run_link: ''
+source: mlflow-artifacts:/958754894695940481/806d369d30ea4014a0a835dc2097cea3/artifacts/model
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/958754894695940481/806d369d30ea4014a0a835dc2097cea3/artifacts/model
+user_id: null
+version: 3

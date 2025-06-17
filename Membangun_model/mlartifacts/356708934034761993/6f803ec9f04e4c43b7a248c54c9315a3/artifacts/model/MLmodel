@@ -1,0 +1,34 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.13
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 2.22.0
+model_size_bytes: 8643310
+model_uuid: 808df1f9ff444bec84700c5386d40981
+prompts: null
+run_id: 6f803ec9f04e4c43b7a248c54c9315a3
+signature:
+  inputs: '[{"type": "double", "name": "Age", "required": true}, {"type": "long",
+    "name": "Sex", "required": true}, {"type": "long", "name": "ChestPainType", "required":
+    true}, {"type": "double", "name": "RestingBP", "required": true}, {"type": "double",
+    "name": "Cholesterol", "required": true}, {"type": "double", "name": "FastingBS",
+    "required": true}, {"type": "long", "name": "RestingECG", "required": true}, {"type":
+    "double", "name": "MaxHR", "required": true}, {"type": "long", "name": "ExerciseAngina",
+    "required": true}, {"type": "double", "name": "Oldpeak", "required": true}, {"type":
+    "long", "name": "ST_Slope", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-06-17 11:14:30.996012'
