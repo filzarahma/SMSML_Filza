@@ -14,9 +14,9 @@ from sklearn.metrics import (
 from sklearn import set_config
 
 # Set URI tracking dan experiment
-# Ganti URI berikut dengan URI MLflow DagsHub project Anda
-# mlflow.set_tracking_uri("https://<username>.dagshub.com/<username>/<repo>.mlflow")
-mlflow.set_tracking_uri("http://127.0.0.1:5000/")
+
+mlflow.set_tracking_uri("https://dagshub.com/filzarahma/heart-disease-prediction.mlflow")
+# mlflow.set_tracking_uri("http://127.0.0.1:5000/")
 mlflow.set_experiment("Tuning - Heart Disease Prediction")
 
 df = pd.read_csv("heart_preprocessing.csv")
