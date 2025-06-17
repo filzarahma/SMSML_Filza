@@ -12,9 +12,10 @@ from sklearn.metrics import (
     ConfusionMatrixDisplay, RocCurveDisplay, PrecisionRecallDisplay
 )
 from sklearn import set_config
+import dagshub
+dagshub.init(repo_owner='filzarahma', repo_name='heart-disease-prediction', mlflow=True)
 
 # Set URI tracking dan experiment
-
 mlflow.set_tracking_uri("https://dagshub.com/filzarahma/heart-disease-prediction.mlflow")
 # mlflow.set_tracking_uri("http://127.0.0.1:5000/")
 mlflow.set_experiment("Tuning - Heart Disease Prediction")
