@@ -3,6 +3,7 @@ import json
 import pandas as pd
 import mlflow
 import mlflow.sklearn
+from mlflow.models.signature import infer_signature
 import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -16,8 +17,8 @@ import dagshub
 dagshub.init(repo_owner='filzarahma', repo_name='heart-disease-prediction', mlflow=True)
 
 # Set URI tracking dan experiment
-mlflow.set_tracking_uri("https://dagshub.com/filzarahma/heart-disease-prediction.mlflow")
-# mlflow.set_tracking_uri("http://127.0.0.1:5000/")
+mlflow.set_tracking_uri("https://dagshub.com/filzarahma/heart-disease-prediction.mlflow") # for DagsHub MLflow server
+# mlflow.set_tracking_uri("http://127.0.0.1:5000/") # for local MLflow server
 mlflow.set_experiment("Tuning - Heart Disease Prediction")
 
 df = pd.read_csv("heart_preprocessing.csv")
@@ -166,18 +167,24 @@ for n_estimators in n_estimators_range:
                 best_params = {
                     "n_estimators": n_estimators,
                     "max_depth": max_depth
-                }
+                }                
+                # Membuat signature dengan nama kolom output "HeartDisease" (bukan hanya double)
+                output_sample = pd.DataFrame(model.predict(X_train.sample(5, random_state=42)), columns=["HeartDisease"])
                 mlflow.sklearn.log_model(
                     sk_model=model,
                     artifact_path="model",
                     input_example=X_train.sample(5, random_state=42),
-                    registered_model_name="rf-heart-disease-best"
+                    registered_model_name="rf-heart-disease-best",
+                    signature=infer_signature(X_train, output_sample)
                 )
-            else:
+            else:                
+                # Menggunakan signature yang sama dengan nama kolom output "HeartDisease"
+                output_sample = pd.DataFrame(model.predict(X_train.sample(5, random_state=42)), columns=["HeartDisease"])
                 mlflow.sklearn.log_model(
                     sk_model=model,
                     artifact_path="model",
-                    input_example=X_train.sample(5, random_state=42)
+                    input_example=X_train.sample(5, random_state=42),
+                    signature=infer_signature(X_train, output_sample)
                 )
 
             # Save estimator.html (model visualization)

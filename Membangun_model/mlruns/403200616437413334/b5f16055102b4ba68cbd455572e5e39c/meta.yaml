@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/403200616437413334/b5f16055102b4ba68cbd455572e5e39c/artifacts
+end_time: 1750225910347
+entry_point_name: ''
+experiment_id: '403200616437413334'
+lifecycle_stage: active
+run_id: b5f16055102b4ba68cbd455572e5e39c
+run_name: rf_n500_depth20
+run_uuid: b5f16055102b4ba68cbd455572e5e39c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750225900186
+status: 3
+tags: []
+user_id: filzarahma

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/838334725220679255/900d33b8d5964356a11abcfe7e447dba/artifacts
+end_time: 1750225571769
+entry_point_name: ''
+experiment_id: '838334725220679255'
+lifecycle_stage: active
+run_id: 900d33b8d5964356a11abcfe7e447dba
+run_name: stylish-foal-441
+run_uuid: 900d33b8d5964356a11abcfe7e447dba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750225547358
+status: 3
+tags: []
+user_id: Fauzan
