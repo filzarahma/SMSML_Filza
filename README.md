@@ -81,19 +81,3 @@ python "Monitoring dan logging/7. inference.py"
 # Pantau metrik dengan Prometheus
 curl http://127.0.0.1:8000/metrics
 ```
-
-## Struktur Proyek
-
-```
-SMSML_Filza-Rahma-Muflihah/
-├── Membangun_model/
-│   ├── modelling.py
-│   ├── modelling_tuning.py
-│   └── mlartifacts/ (artefak model)
-├── Monitoring dan logging/
-│   ├── 3. prometheus_exporter.py
-│   ├── 7. inference.py  
-│   └── 8. Lainnya/
-│       └── test_monitoring.py
-└── README.md
-```
